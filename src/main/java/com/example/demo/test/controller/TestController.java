@@ -10,12 +10,18 @@ import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
 
+/**
+ * @author Administrator
+ */
 @RestController
 @RequestMapping("/users")
 public class TestController {
 
-    @Autowired
     private TestService service;
+    @Autowired
+    public void setService(TestService service) {
+        this.service = service;
+    }
 
     @RequestMapping(value = "getUsers", method = RequestMethod.GET)
     public @ResponseBody List<TestVo> getUsers() {

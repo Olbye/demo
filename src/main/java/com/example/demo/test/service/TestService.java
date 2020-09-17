@@ -7,11 +7,17 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+/**
+ * @author Administrator
+ */
 @Service
 public class TestService {
-    @Autowired
-    private TestDao dao;
 
+    private TestDao dao;
+    @Autowired
+    public void setDao(TestDao dao) {
+        this.dao = dao;
+    }
     public List<TestVo> getUsers() {
         return dao.getUsers();
     }

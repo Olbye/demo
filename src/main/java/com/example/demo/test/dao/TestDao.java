@@ -5,7 +5,10 @@ import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
+/**
+ * @author Administrator
+ */
 @Repository
 public interface TestDao {
-    public List<TestVo> getUsers();
+    List<TestVo> getUsers();
 }
