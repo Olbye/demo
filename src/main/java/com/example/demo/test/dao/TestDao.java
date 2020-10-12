@@ -1,6 +1,7 @@
 package com.example.demo.test.dao;
 
-import com.example.demo.test.vo.TestVo;
+import com.example.demo.test.dto.UserDto;
+import com.example.demo.test.vo.UserVo;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
@@ -10,5 +11,6 @@ import java.util.List;
  */
 @Repository
 public interface TestDao {
-    List<TestVo> getUsers();
+    List<UserVo> getUsers();
+    List<UserVo> getUser(UserDto userDto);
 }
